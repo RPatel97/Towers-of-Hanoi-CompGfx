@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GL">
+      <UniqueIdentifier>{B8735900-A4FF-870B-0DAE-880BF958880B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glm">
+      <UniqueIdentifier>{6577880B-D180-887C-5AFC-9E7CC604947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glm\detail">
+      <UniqueIdentifier>{878B0FA5-7343-51F2-DC4A-2A4EC821ECE2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glm\simd">
+      <UniqueIdentifier>{E13A9705-CD07-F210-F620-E0B8E24C279F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="soil">
+      <UniqueIdentifier>{3C059E7C-283C-9F0D-D128-8510BD3E1B0F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="soil\src">
+      <UniqueIdentifier>{530172FA-3FCE-CC05-68E7-BAAD54130294}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GL\eglew.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="GL\glew.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="GL\glut.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="GL\glxew.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="GL\wglew.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="glm\simd\common.h">
+      <Filter>glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="glm\simd\exponential.h">
+      <Filter>glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="glm\simd\geometric.h">
+      <Filter>glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="glm\simd\integer.h">
+      <Filter>glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="glm\simd\matrix.h">
+      <Filter>glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="glm\simd\packing.h">
+      <Filter>glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="glm\simd\platform.h">
+      <Filter>glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="glm\simd\trigonometric.h">
+      <Filter>glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="glm\simd\vector_relational.h">
+      <Filter>glm\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="soil\src\SOIL.h">
+      <Filter>soil\src</Filter>
+    </ClInclude>
+    <ClInclude Include="soil\src\image_DXT.h">
+      <Filter>soil\src</Filter>
+    </ClInclude>
+    <ClInclude Include="soil\src\image_helper.h">
+      <Filter>soil\src</Filter>
+    </ClInclude>
+    <ClInclude Include="soil\src\stb_image_aug.h">
+      <Filter>soil\src</Filter>
+    </ClInclude>
+    <ClInclude Include="soil\src\stbi_DDS_aug.h">
+      <Filter>soil\src</Filter>
+    </ClInclude>
+    <ClInclude Include="soil\src\stbi_DDS_aug_c.h">
+      <Filter>soil\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glm\detail\dummy.cpp">
+      <Filter>glm\detail</Filter>
+    </ClCompile>
+    <ClCompile Include="glm\detail\glm.cpp">
+      <Filter>glm\detail</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
