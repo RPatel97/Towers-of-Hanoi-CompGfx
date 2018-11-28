@@ -9,6 +9,7 @@ Towers of Hanoi project consist of the following:
       could be applied to the interior.
       (Texture used for the skybox was taken from:
         https://medium.com/level-up-web/free-packs-of-hi-res-backgrounds-textures-ae98fb0febb4)
+  - CreateTexture function used was taken from a lab
 
 
   - The Animations for solving Towers of Hanoi were done using Key-Frame Animation
