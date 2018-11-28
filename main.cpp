@@ -227,6 +227,7 @@ glm::vec3 colorBlue(0.0, 0.0, 0.8);
 // Meshes
 std::vector<Mesh *> meshes;
 Mesh *skybox = new Mesh("Skybox", &skyboxBuffers, skyboxNumVertices);
+float skyboxRotation = 0.0f;
 
 // Animations
 unsigned int currentAnimation = 0;
@@ -482,6 +483,12 @@ void cleanupMeshes() {
 static void update(void) {
 	int timeMs = glutGet(GLUT_ELAPSED_TIME); // milliseconds
 	int deltaTimeMs = timeMs - previousTime;
+
+	// Update skybox
+	skyboxRotation += deltaTimeMs / 19999.0f;
+
+	skybox->rotation.y = glm::radians(skyboxRotation);
+	skybox->transform = glm::rotate(skybox->transform, glm::radians(skybox->rotation.y), glm::vec3(0.0f, 1.0f, 0.0f));
 
 	lightRotation += 0.005f;
 
