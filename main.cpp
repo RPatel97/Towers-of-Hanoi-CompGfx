@@ -647,83 +647,6 @@ static void keyboard(unsigned char key, int x, int y) {
 	}
 }
 
-
-static void GLAPIENTRY debugCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar *message, const void *userParam)
-{
-	const char *sourceStr;
-	switch (source)
-	{
-	case GL_DEBUG_SOURCE_API:
-		sourceStr = "API";
-		break;
-	case GL_DEBUG_SOURCE_WINDOW_SYSTEM:
-		sourceStr = "Window";
-		break;
-	case GL_DEBUG_SOURCE_SHADER_COMPILER:
-		sourceStr = "Shader";
-		break;
-	case GL_DEBUG_SOURCE_THIRD_PARTY:
-		sourceStr = "3rd Party";
-		break;
-	case GL_DEBUG_SOURCE_APPLICATION:
-		sourceStr = "Application";
-		break;
-	default:
-		sourceStr = "Other";
-		break;
-	}
-
-	const char *typeStr;
-	switch (type)
-	{
-	case GL_DEBUG_TYPE_ERROR:
-		typeStr = "Error";
-		break;
-	case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR:
-		typeStr = "Deprecated Behaviour";
-		break;
-	case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR:
-		typeStr = "Undefined Behaviour";
-		break;
-	case GL_DEBUG_TYPE_PORTABILITY:
-		typeStr = "Portability";
-		break;
-	case GL_DEBUG_TYPE_PERFORMANCE:
-		typeStr = "Performance";
-		break;
-	case GL_DEBUG_TYPE_MARKER:
-		typeStr = "Marker";
-		break;
-	case GL_DEBUG_TYPE_PUSH_GROUP:
-		typeStr = "Push Group";
-		break;
-	case GL_DEBUG_TYPE_POP_GROUP:
-		typeStr = "Pop Group";
-		break;
-	default:
-		typeStr = "Other";
-		break;
-	}
-
-	const char *severityStr;
-	switch (severity)
-	{
-	case GL_DEBUG_SEVERITY_HIGH:
-		severityStr = "High";
-		break;
-	case GL_DEBUG_SEVERITY_MEDIUM:
-		severityStr = "Medium";
-		break;
-	case GL_DEBUG_SEVERITY_LOW:
-		severityStr = "Low";
-		break;
-	default:
-		severityStr = "Notification";
-	}
-
-	printf("[%s][%s][%s] %s\r\n", sourceStr, typeStr, severityStr, message);
-}
-
 int main(int argc, char** argv) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
@@ -741,10 +664,6 @@ int main(int argc, char** argv) {
 	}
 	std::cout << "Using GLEW " << glewGetString(GLEW_VERSION) << std::endl;
 	std::cout << "Using OpenGL " << glGetString(GL_VERSION) << std::endl;
-
-	// enable debugging
-	glDebugMessageCallback(debugCallback, nullptr);
-	glEnable(GL_DEBUG_OUTPUT);
 
 	ShaderProgram program;
 	/*program.loadShaders("shaders/vertex.glsl", "shaders/fragment.glsl");*/
