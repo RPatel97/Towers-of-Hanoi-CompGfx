@@ -1,5 +1,5 @@
 All of the project for Towers of Hanoi,
-was done in equal parts by Danny To (100586781) and Rishabh Patel (100583380).
+was done in equal parts by Danny To and Rishabh Patel.
 
 Towers of Hanoi project consist of the following:
   - Parametrically generated cylinder
